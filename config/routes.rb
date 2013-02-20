@@ -1,14 +1,10 @@
 SystemsProject::Application.routes.draw do
-  resources :users
-
-
   resources :children
-
-
   resources :programs
-
-
+  resources :users
+  resource :user_sessions
   root :to => 'static_pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

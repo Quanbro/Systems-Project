@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-  # attr_accessible :title, :body
+	acts_as_authentic
+  attr_accessible :email, :password, :password_confirmation, :perishable_token, :created_at, :role
 end
