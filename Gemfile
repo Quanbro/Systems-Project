@@ -29,3 +29,5 @@ gem "rails3-generators"
 
 #Error messages
 gem 'dynamic_form'
+
+gem "cancan"

@@ -9,6 +9,8 @@
 <body>
 <%= login_status %>
 <%= yield %>
-
+<% if can? :update, @user %>
+  <h1>You Can Manage This page</h1>
+<% end %>
 </body>
 </html>
