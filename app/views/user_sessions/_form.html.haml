@@ -5,6 +5,9 @@
       %ul
         - @user_session.errors.full_messages.each do |msg|
           %li= msg
-
   .actions
+    = f.label :email 
+    = f.text_field :email 
+    = f.label :password 
+    = f.password_field :password  
     = f.submit 'Save'
