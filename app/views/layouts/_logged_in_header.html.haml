@@ -1,4 +1,5 @@
 = link_to 'Show Programs', programs_path
 = link_to 'Show Users', users_path
 = link_to 'Show Children', children_path
+= link_to 'Edit Profile', edit_user_path(current_user)
 = link_to 'Sign Out', user_sessions_path, :method => :delete, :data => { :confirm => 'Are you sure?' }

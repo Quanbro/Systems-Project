@@ -2,8 +2,9 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    raise user.inspect
-    if user.role == "Therapist"
+    can :manage, User, :id => user.id
+    
+    if user.role == "Admin"
         can :read, :all
     end 
 
