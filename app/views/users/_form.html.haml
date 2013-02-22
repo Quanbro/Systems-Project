@@ -8,10 +8,11 @@
 
   .actions
     = f.label :email 
-    = f.text_field :email 
-    %br
-    = f.label :role
-    = f.select(:role,{ "Admin" => "Admin", "Therapist" => "Therapist", "Parent"=>"Parent"})
+    = f.text_field :email
+    - if admin
+      %br
+      = f.label :role
+      = f.select(:role,{ "Admin" => "Admin", "Therapist" => "Therapist", "Parent"=>"Parent"})
     %br
     = f.label :password 
     = f.password_field :password
