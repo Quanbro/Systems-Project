@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130220200039) do
+ActiveRecord::Schema.define(:version => 20130305130751) do
 
   create_table "children", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(:version => 20130220200039) do
     t.string   "perishable_token",                           :null => false
     t.integer  "login_count",                                :null => false
     t.string   "role",              :default => "Therapist"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
 end
