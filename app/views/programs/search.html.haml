@@ -1,0 +1,22 @@
+= form_for search_path, :method => "get" do |f|
+  %br
+  .actions
+    = f.label :search
+    = f.text_field :search
+    = f.submit 'Search'
+
+%h1 Programs
+
+%table
+  %tr
+    %th
+    %th
+    %th
+    %th
+
+  - @programs.each do |program|
+    %tr
+      %td= program.name
+      %td= link_to 'Show', program
+      %td= link_to 'Edit', edit_program_path(program)
+      %td= link_to 'Destroy', program, :method => :delete, :data => { :confirm => 'Are you sure?' }

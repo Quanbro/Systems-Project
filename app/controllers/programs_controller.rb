@@ -81,4 +81,14 @@ class ProgramsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def search
+    if params[search_path]
+      @programs = Program.search(params[search_path][:search])
+    else 
+      @programs = Program.search(params[:search])
+    end 
+  end 
+    
 end
