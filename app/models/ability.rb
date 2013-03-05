@@ -7,9 +7,7 @@ class Ability
         can :manage, User, :id => user.id
 
         if user.role == "Admin"
-            can :read, :all
-            can :create, User
-            can :update, User
+            can :manage, :all
         elsif user.role == "Therapist"
             can :show, User
         end
