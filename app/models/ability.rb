@@ -4,13 +4,14 @@ class Ability
   def initialize(user)
     if !user.nil?
 
-        can :update, User, :id => user.id
+        can :manage, User, :id => user.id
 
         if user.role == "Admin"
             can :read, :all
             can :create, User
             can :update, User
         elsif user.role == "Therapist"
+            can :show, User
         end
     else 
         can :create, User

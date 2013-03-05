@@ -3,6 +3,10 @@
 %h1
   Email: 
   = current_user.email
+  %br
+  %br
+  Role:
+  = current_user.role
 
 
 /= link_to 'Edit', edit_user_path(@user)
