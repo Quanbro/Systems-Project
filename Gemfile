@@ -6,11 +6,8 @@ gem 'rails', '3.2.12'
 gem 'pg'
 
 #Sqlite3
-#gem 'sqlite3'
+gem 'sqlite3'
 
-group :development, :test do
-  gem 'sqlite3'
-end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,8 +17,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 #Js runtime rubyracer
-gem 'therubyracer'
+gem 'therubyracer', :platforms => :ruby
 
 # To use debugger
 # gem 'debugger'
