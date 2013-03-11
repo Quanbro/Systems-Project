@@ -18,6 +18,8 @@ end
 
 gem 'jquery-rails'
 
+#gem 'debugger'
+
 #this will allow therubyracer to work on *nix but not windows
 #Js runtime rubyracer
 gem 'therubyracer', :platforms => :ruby
