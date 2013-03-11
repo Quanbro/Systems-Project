@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.12'
 
@@ -18,11 +18,9 @@ end
 
 gem 'jquery-rails'
 
+#this will allow therubyracer to work on *nix but not windows
 #Js runtime rubyracer
 gem 'therubyracer', :platforms => :ruby
-
-# To use debugger
-# gem 'debugger'
 
 #Haml and sass gems
 gem 'haml-rails'
