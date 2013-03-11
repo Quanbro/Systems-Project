@@ -22,6 +22,7 @@ gem 'jquery-rails'
 
 #this will allow therubyracer to work on *nix but not windows
 #Js runtime rubyracer
+gem 'execjs', :platforms => :ruby
 gem 'therubyracer', :platforms => :ruby
 
 #Haml and sass gems
