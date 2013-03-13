@@ -4,7 +4,10 @@ gem 'rails', '3.2.12'
 
 #Database Adapter Gems
 gem 'pg'
-gem 'sqlite3'
+
+#Sqlite3
+#gem 'sqlite3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
