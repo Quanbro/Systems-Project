@@ -6,7 +6,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 
 #Sqlite3
-gem 'sqlite3'
+#gem 'sqlite3'
 
 
 # Gems used only for assets and not required
