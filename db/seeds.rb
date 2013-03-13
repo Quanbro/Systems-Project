@@ -18,7 +18,7 @@ admin = User.create(
     :role => "Admin"
 )
 
-admin = User.create!(
+admin = User.create(
     :first_name => "Dylan",
     :last_name => "Scott",
     :email => "dylan@gmail.com",
