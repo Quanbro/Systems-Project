@@ -85,9 +85,9 @@ class ProgramsController < ApplicationController
 
   def search
     if params[search_path]
-      @programs = Program.search(params[search_path][:search])
+      @programs = Program.search(params[search_path][:filter])
     else 
-      @programs = Program.search(params[:search])
+      @programs = Program.search(params[:filter])
     end 
   end 
     
