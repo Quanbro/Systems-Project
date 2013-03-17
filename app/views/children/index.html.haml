@@ -11,6 +11,8 @@
     %tr
       %td= child.first_name
       %td= child.last_name    
+      /%td= link_to 'Show Programs', child_programs_path(child)
+      %td= link_to 'Add Program', new_child_program_path(child)
       %td= link_to 'Show Programs', child_programs_path(child)
       %td= link_to 'Show', child
       %td= link_to 'Edit', edit_child_path(child)
