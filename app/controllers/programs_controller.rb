@@ -6,11 +6,9 @@ class ProgramsController < ApplicationController
   end 
 
   def add
-
-    @program = Program.find(params[:id])
+    # @program = Program.find(params[:id])
+    @program = Program.find_by_child_id(params[:child_id])
     @program.update_attributes(:child_id => @child.id)
-
-
     respond_to do |format|
       if @program.update_attributes(params[:program])
         format.html { redirect_to child_programs_path(@child), notice: 'Program was successfully updated.' }
@@ -20,14 +18,13 @@ class ProgramsController < ApplicationController
         format.json { render json: @program.errors, status: :unprocessable_entity }
       end
     end
-
   end
-
 
   # GET /programs
   # GET /programs.json
   def index
-    @programs = Program.all
+    #@programs = Program.all
+    @programs = Program.find_all_by_child_id(params[:child_id])
 
     respond_to do |format|
       format.html # index.html.erb
