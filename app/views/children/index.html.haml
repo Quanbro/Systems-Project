@@ -11,6 +11,7 @@
     %tr
       %td= child.first_name
       %td= child.last_name    
+      %td= link_to 'Show Programs', child_programs_path(child)
       %td= link_to 'Show', child
       %td= link_to 'Edit', edit_child_path(child)
       %td= link_to 'Remove', child, :method => :delete, :data => { :confirm => 'Are you sure?' }
