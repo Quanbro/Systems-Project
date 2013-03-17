@@ -1,5 +1,29 @@
 class ProgramsController < ApplicationController
-  
+  before_filter :get_child
+
+  def get_child
+    @child = Child.find(params[:child_id])
+  end 
+
+  def add
+
+    @program = Program.find(params[:id])
+    @program.update_attributes(:child_id => @child.id)
+
+
+    respond_to do |format|
+      if @program.update_attributes(params[:program])
+        format.html { redirect_to child_programs_path(@child), notice: 'Program was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @program.errors, status: :unprocessable_entity }
+      end
+    end
+
+  end
+
+
   # GET /programs
   # GET /programs.json
   def index
