@@ -1,5 +1,5 @@
 class Program < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :child_id
   validates_presence_of :name
 
   belongs_to :child
