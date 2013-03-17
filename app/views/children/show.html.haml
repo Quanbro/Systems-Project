@@ -1,8 +1,9 @@
 %p#notice= notice
 
-
+= @child.first_name
 = link_to 'Edit', edit_child_path(@child)
 \|
 = link_to 'Back', children_path
 
-%h1 Add Program to #{@child.first_name}
+%h1 
+  =link_to 'Add Program', child_programs_path(@child)
