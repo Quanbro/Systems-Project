@@ -1,7 +1,8 @@
 class Program < ActiveRecord::Base
   attr_accessible :name
-
   validates_presence_of :name
+
+  belongs_to :child
   
   def self.search(search)
     if search
