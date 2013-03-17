@@ -1,7 +1,10 @@
 SystemsProject::Application.routes.draw do
   match 'programs/search' => 'programs#search', :as => :search
+
+  match '/children/:child_id/programs/:id/add' => 'programs#add', :as => :add_program
+
   resources :children
-  resources :programs, :only => :index
+  resources :programs
   resources :users 
   
   resources :children do
