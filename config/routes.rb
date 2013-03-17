@@ -1,8 +1,12 @@
 SystemsProject::Application.routes.draw do
   match 'programs/search' => 'programs#search', :as => :search
   resources :children
-  resources :programs
-  resources :users
+  resources :programs, :only => :index
+  resources :users 
+  
+  resources :children do
+    resources :programs
+  end 
   resource :user_sessions
   
   root :to => 'static_pages#home'
