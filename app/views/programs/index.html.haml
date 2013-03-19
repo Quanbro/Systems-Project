@@ -17,4 +17,8 @@
       /%td= link_to 'Remove', program, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
-= link_to 'Create and Add New Program', new_child_program_path(@child)
+= link_to 'Create and Add New Program to ' + @child.first_name, new_child_program_path(@child)
+
+%br
+
+Add existing program to 
