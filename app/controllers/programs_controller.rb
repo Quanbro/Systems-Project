@@ -2,7 +2,6 @@ class ProgramsController < ApplicationController
   before_filter :get_child
 
   def get_child
-
     @child = Child.find(params[:child_id])
   end 
 
