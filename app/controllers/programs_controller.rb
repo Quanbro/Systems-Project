@@ -2,6 +2,7 @@ class ProgramsController < ApplicationController
   before_filter :get_child
 
   def get_child
+
     @child = Child.find(params[:child_id])
   end 
 
@@ -98,7 +99,9 @@ class ProgramsController < ApplicationController
     @program.destroy
 
     respond_to do |format|
-      format.html { redirect_to programs_url }
+      #Change default redirect url after destroying a program 
+      #format.html { redirect_to programs_url }
+      format.html { redirect_to child_programs_url }
       format.json { head :no_content }
     end
   end
