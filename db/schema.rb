@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130323161214) do
+ActiveRecord::Schema.define(:version => 20130323181616) do
 
   create_table "children", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(:version => 20130323161214) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "child_id"
+    t.string   "sd"
+    t.string   "stimuli"
+    t.string   "cr"
   end
 
   create_table "roles", :force => true do |t|
