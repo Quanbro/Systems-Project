@@ -1,9 +1,30 @@
 class ProgramsController < ApplicationController
-  
+  before_filter :get_child
+
+  def get_child
+    @child = Child.find(params[:child_id])
+  end 
+
+  def add
+    # @program = Program.find(params[:id])
+    @program = Program.find_by_child_id(params[:child_id])
+    @program.update_attributes(:child_id => @child.id)
+    respond_to do |format|
+      if @program.update_attributes(params[:program])
+        format.html { redirect_to child_programs_path(@child), notice: 'Program was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @program.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # GET /programs
   # GET /programs.json
   def index
-    @programs = Program.all
+    #@programs = Program.all
+    @programs = Program.find_all_by_child_id(params[:child_id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,10 +63,10 @@ class ProgramsController < ApplicationController
   # POST /programs.json
   def create
     @program = Program.new(params[:program])
-
+    @program.update_attributes(:child_id => @child.id)
     respond_to do |format|
       if @program.save
-        format.html { redirect_to @program, notice: 'Program was successfully created.' }
+        format.html { redirect_to [@child, @program], notice: 'Program was successfully created.' }
         format.json { render json: @program, status: :created, location: @program }
       else
         format.html { render action: "new" }
@@ -61,7 +82,7 @@ class ProgramsController < ApplicationController
 
     respond_to do |format|
       if @program.update_attributes(params[:program])
-        format.html { redirect_to @program, notice: 'Program was successfully updated.' }
+        format.html { redirect_to [@child, @program], notice: 'Program was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -77,7 +98,9 @@ class ProgramsController < ApplicationController
     @program.destroy
 
     respond_to do |format|
-      format.html { redirect_to programs_url }
+      #Change default redirect url after destroying a program 
+      #format.html { redirect_to programs_url }
+      format.html { redirect_to child_programs_url }
       format.json { head :no_content }
     end
   end

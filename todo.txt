@@ -1,0 +1,11 @@
+Add program names to seeds file
+
+Fix terrible terrible hack in userscontroller
+
+
+
+Mar 19th, 2013
+
+Add remove program from child option.
+Add additional fields to programs model. 
+Fix Back link on all pages 

@@ -33,8 +33,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     respond_to do |format|
-      #This is a terrible hack. Fix this ASAP
-      @user.login_count = 1
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }

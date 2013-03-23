@@ -1,0 +1,20 @@
+Tue, 19 Mar 2013 10:39:40 -0400
+doc/README_FOR_APP	Wed, 20 Feb 2013 14:22:51 -0500
+app/controllers/application_controller.rb	Sat, 16 Mar 2013 21:22:43 -0400
+app/controllers/children_controller.rb	Wed, 20 Feb 2013 16:33:29 -0500
+app/controllers/programs_controller.rb	Tue, 19 Mar 2013 09:58:39 -0400
+app/controllers/static_pages_controller.rb	Wed, 20 Feb 2013 15:33:32 -0500
+app/controllers/user_sessions_controller.rb	Wed, 20 Feb 2013 14:49:05 -0500
+app/controllers/users_controller.rb	Tue, 05 Mar 2013 01:48:09 -0500
+app/helpers/application_helper.rb	Wed, 20 Feb 2013 22:34:44 -0500
+app/helpers/children_helper.rb	Wed, 20 Feb 2013 14:41:34 -0500
+app/helpers/programs_helper.rb	Wed, 20 Feb 2013 14:41:21 -0500
+app/helpers/static_pages_helper.rb	Wed, 20 Feb 2013 14:28:31 -0500
+app/helpers/user_sessions_helper.rb	Wed, 20 Feb 2013 14:46:42 -0500
+app/helpers/users_helper.rb	Wed, 20 Feb 2013 22:31:23 -0500
+app/models/ability.rb	Tue, 05 Mar 2013 09:22:13 -0500
+app/models/child.rb	Sat, 16 Mar 2013 20:24:56 -0400
+app/models/program.rb	Sat, 16 Mar 2013 21:51:58 -0400
+app/models/role.rb	Wed, 20 Feb 2013 15:00:39 -0500
+app/models/user.rb	Tue, 12 Mar 2013 20:58:21 -0400
+app/models/user_session.rb	Wed, 20 Feb 2013 14:47:22 -0500
