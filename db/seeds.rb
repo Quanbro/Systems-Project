@@ -26,3 +26,13 @@ admin = User.create(
     :password_confirmation => "12345678a",
     :login_count => 0
 )
+
+user = User.create(
+    :first_name => "Paul",
+    :last_name => "Bialo",
+    :email => "p@gmail.com",
+    :password => "12345678a",
+    :password_confirmation => "12345678a",
+    :login_count => 0
+)
+
