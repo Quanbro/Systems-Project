@@ -11,24 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130323203154) do
+ActiveRecord::Schema.define(:version => 20130323195706) do
 
   create_table "children", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "active",     :default => true
   end
 
   create_table "programs", :force => true do |t|
-    t.string   "name",             :null => false
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "child_id"
     t.string   "sd"
     t.string   "stimuli"
     t.string   "cr"
-    t.string   "mastery_criteria"
   end
 
   create_table "roles", :force => true do |t|
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(:version => 20130323203154) do
     t.string   "role",              :default => "Therapist"
     t.string   "first_name"
     t.string   "last_name"
+    t.boolean  "active",            :default => true
   end
 
 end
+
