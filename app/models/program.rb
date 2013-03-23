@@ -1,5 +1,5 @@
 class Program < ActiveRecord::Base
-  attr_accessible :name, :child_id, :sd, :stimuli, :cr
+  attr_accessible :name, :child_id, :sd, :stimuli, :cr, :mastery_criteria
   validates_presence_of :name
 
   belongs_to :child
