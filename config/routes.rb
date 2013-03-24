@@ -11,6 +11,8 @@ SystemsProject::Application.routes.draw do
     resources :programs
   end 
   resource :user_sessions
+
+  match 'graph' => 'static_pages#graph'
   
   root :to => 'static_pages#home'
 
