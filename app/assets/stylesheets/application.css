@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+.actions, .field_with_errors {
+   display: inline-block;
+   text-align: right;
+}
