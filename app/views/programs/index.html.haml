@@ -13,9 +13,11 @@
       %td= link_to 'Edit', edit_child_program_path(@child, program)
       %td= link_to 'Remove', child_program_path(@child, program), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
+  - if @programs.length == 0
+    %p No programs found for #{@child.first_name}
+
 %br
 = link_to 'Create and Add New Program to ' + @child.first_name, new_child_program_path(@child)
 
 %br
-
-Add existing program to #{@child.first_name} 
+Add existing program to #{@child.first_name} + #{@child.last_name}

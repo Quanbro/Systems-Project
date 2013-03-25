@@ -1,5 +1,7 @@
 %p#notice= notice
 
 #{@child.first_name} #{@child.last_name}
-
+%br
+= link_to 'Show List of Programs', child_programs_path(@child)
+%br
 = link_to 'Edit', edit_child_path(@child)
