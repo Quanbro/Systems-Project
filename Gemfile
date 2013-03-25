@@ -2,12 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-#Postgresql gem
+#Database Adapter Gems
 gem 'pg'
-
-#Sqlite3
 gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,9 +28,10 @@ gem 'sass-rails'
 
 #Authlogic gem for login processing
 gem 'authlogic'
-gem "rails3-generators"
+gem 'rails3-generators'
 
-#Error messages
+#Dynamic Form gem used for error messages
 gem 'dynamic_form'
 
-gem "cancan"
+#Cancan used for ability system
+gem 'cancan'
