@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def disabled_index
     #@users = User.all
-    #Only find active users
+    #Only find disabled users
     @users = User.find(:all, :conditions => {:active => false })
     respond_to do |format|
       format.html # index.html.erb
@@ -84,7 +84,7 @@ class UsersController < ApplicationController
   def enable
     @user = User.find(params[:user_id])
     #@user.destroy
-    #update the active attribute to be false
+    #update the active attribute to be true
     @user.update_attributes(:active => true)
 
     respond_to do |format|
