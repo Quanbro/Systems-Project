@@ -14,6 +14,7 @@ SystemsProject::Application.routes.draw do
 
   match 'graph' => 'static_pages#graph'
   match 'disabled' => 'users#disabled_index'
+  match 'enable/:user_id' => 'users#enable', :as => :enable
   
   root :to => 'static_pages#home'
 

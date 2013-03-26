@@ -17,7 +17,7 @@
 
       - if admin
         %td= link_to 'Edit', edit_user_path(user)
-        //%td= link_to 'Disable', user, :method => :delete, :data => { :confirm => 'Are you sure you want to disable this user account?' }
+        %td= link_to 'Enable', enable_path(user)
 
   - if admin      
     %td= link_to 'New User', new_user_path

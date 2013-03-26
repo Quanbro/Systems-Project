@@ -71,11 +71,26 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
+    #@user.destroy
+    #update the active attribute to be false
+    @user.update_attributes(:active => false)
 
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
   end
+
+  def enable
+    @user = User.find(params[:user_id])
+    #@user.destroy
+    #update the active attribute to be false
+    @user.update_attributes(:active => true)
+
+    respond_to do |format|
+      format.html { redirect_to users_url }
+      format.json { head :no_content }
+    end
+  end
+
 end
