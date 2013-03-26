@@ -10,7 +10,7 @@ class Ability
             can :manage, :all
         elsif user.role == "Therapist"
             can :show, User
-            can :read, Child
+            can :manage, Child
         end
     else 
         can :create, User
