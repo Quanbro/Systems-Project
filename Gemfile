@@ -5,6 +5,8 @@ gem 'rails', '3.2.12'
 #Database Adapter Gems
 gem 'pg'
 
+
+
 #Sqlite3
 #gem 'sqlite3'
 
