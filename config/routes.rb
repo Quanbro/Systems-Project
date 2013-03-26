@@ -13,6 +13,7 @@ SystemsProject::Application.routes.draw do
   resource :user_sessions
 
   match 'graph' => 'static_pages#graph'
+  match 'disabled' => 'users#disabled_index'
   
   root :to => 'static_pages#home'
 
